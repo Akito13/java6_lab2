@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+    <th:block th:if="${error == null}">
+        <a th:href="@{|/student?i=${i+1}|}">Next</a>
+        <ul th:object="${sv}">
+            <li th:text="*{name}"></li>
+            <li th:text="*{marks}"></li>
+            <li th:text="*{contact.email}"></li>
+        </ul>
+    </th:block>
+    <th:block th:unless="${error == null}">
+        <h3 th:text="${error}"></h3>
+    </th:block>
+</body>
+</html>

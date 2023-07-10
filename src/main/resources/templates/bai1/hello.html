@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+</head>
+<body>
+    <h1>Welcome to Thymeleaf</h1>
+    <ul>
+        <li th:text="${msg}"></li>
+        <li th:utext="${msg}"></li>
+    </ul>
+    <ul>
+        <li>[[${msg}]]</li>
+        <li>[(${msg})]</li>
+    </ul>
+</body>
+</html>

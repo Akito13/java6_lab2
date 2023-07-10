@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+    <img  th:src="@{/images/FPTpolyLogo.jpg}" th:alt="'FPT Logo'">
+    <nav th:replace="~{/bai2/layout/menu.html}"></nav>
+    <h1 th:text="${msg}"></h1>
+    <ul th:object="${sv}">
+        <li th:text="*{name}"></li>
+        <li th:text="*{marks}"></li>
+        <li th:text="*{contact.email}"></li>
+    </ul>
+</body>
+</html>

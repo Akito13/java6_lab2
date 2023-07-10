@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope</title>
+</head>
+<body>
+    <h1>Scope Demo</h1>
+    <ul>
+        <li th:text="${a}"></li>
+        <li th:text="${b}"></li>
+        <li th:text="${session.c}"></li>
+        <li th:text="${application.d}"></li>
+        <li th:text="${param.e}"></li>
+    </ul>
+</body>
+</html>
